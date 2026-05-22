@@ -20,3 +20,9 @@
   --font-ubuntu-medium:  font-weight: 500;
   --font-ubuntu-bold: font-weight: 700; */
 }
+
+@layer base {
+  main {
+    @apply w-full md:w-(--content-width) md:mx-auto;
+  }
+}

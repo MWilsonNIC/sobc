@@ -239,7 +239,9 @@
         <div>
           <h1>
             Special Olympics BC ~
-            <span class="text-red-700">Comox Valley</span>
+            <span class="text-red-700 font-bold whitespace-nowrap">
+              Comox Valley
+            </span>
           </h1>
           <p class="intro py-6">
             Special Olympics BC, Comox Valley offers year-round sport training
@@ -251,11 +253,12 @@
           <a href="programs.html" class="link py-2">View Sports</a>
           <a href="calendar.html" class="link py-2">View Calendar</a>
         </div>
-        <img src="images/landscape-sm.png" alt="" class="pt-6 lg:pt-0" />
+        <img src="images/landscape-sm.png" alt="" class="mt-6 lg:mt-0" />
       </section>
 
       <!-- What we do -->
-      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
+      <section
+        class="lg:grid lg:grid-cols-2 lg:gap-24 mt-12 lg:mt-24 bg-biscuit-500/40 rounded-xl p-8">
         <img src="images/landscape-sm.png" alt="" class="hidden lg:block" />
         <div>
           <h2>What we do</h2>
@@ -279,7 +282,6 @@
               details.
             </p>
           </div>
-
           <a href="programs.html" class="link py-2">View Sports</a>
         </div>
       </section>
@@ -288,65 +290,85 @@
       <section class="pt-12 lg:pt-24">
         <h2 class="pb-8">Get involved</h2>
         <div class="lg:grid lg:grid-cols-3 lg:gap-12 text-center">
+          <!-- Become an athlete -->
           <article>
-            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+            <img
+              src="images/landscape-sm.png"
+              alt=""
+              class="rounded-b-none h-fit" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
               <h3>Become an athlete</h3>
-              <p>
+              <p class="mx-auto">
                 Join a supportive community where athletes can train, compete,
                 and have fun year-round.
               </p>
-              <a href="get-involved.html" class="link py-2">
+              <a href="get-involved.html" class="link py-4">
                 Register as an athlete
               </a>
             </div>
           </article>
+
+          <!-- Become a Volunteer -->
           <article class="pt-6 lg:pt-0">
-            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+            <img
+              src="images/landscape-sm.png"
+              alt=""
+              class="rounded-b-none h-fit" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
               <h3>Become a volunteer</h3>
-              <p>
+              <p class="mx-auto">
                 Help make local programs possible as a coach, helper, organizer,
                 or community supporter.
               </p>
-              <a href="get-involved.html" class="link py-2">
+              <a href="get-involved.html" class="link py-4">
                 Register to volunteer
               </a>
             </div>
           </article>
+
+          <!-- Support the chapter -->
           <article class="pt-6 lg:pt-0">
-            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+            <img
+              src="images/landscape-sm.png"
+              alt=""
+              class="rounded-b-none h-fit" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
               <h3>Support the chapter</h3>
-              <p>
+              <p class="mx-auto">
                 Your donation helps local athletes access quality programs,
                 equipment, and training opportunities.
               </p>
-              <a href="donate.html" class="link py-2">Donate</a>
+              <a href="donate.html" class="link py-4">Donate</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Calendar  -->
-      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
-        <h2>Stay up to date</h2>
-        <p>
-          Stay up to date with practices, competitions, deadlines, and local
-          events through our calendar.
-        </p>
-      </section>
+      <div class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
+        <!-- Calendar  -->
+        <section class="p-8 bg-biscuit-500/40 rounded-xl">
+          <h2>Stay up to date</h2>
+          <p>
+            Stay up to date with practices, competitions, deadlines, and local
+            events through our calendar.
+          </p>
+          <a href="calendar.html" class="link py-4">View Calendar</a>
+        </section>
 
-      <!-- Contact -->
-      <section>
-        <h2>Contact Us</h2>
-        <p>Have a question or want help getting started?</p>
-        <p>Contact our local team. We would be happy to hear from you.</p>
-      </section>
+        <!-- Contact -->
+        <section class="mt-12 lg:mt-0 p-8">
+          <h2>Contact Us</h2>
+          <p>
+            Have a question or want help getting started? Contact our local
+            team. We would be happy to hear from you.
+          </p>
+          <a href="contact.html" class="link py-4">Contact Us</a>
+        </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-24">
+    <footer class="mt-20">
       <!-- Curved divider: biscuit underlay + red overlay -->
       <svg
         xmlns="http://www.w3.org/2000/svg"

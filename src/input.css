@@ -8,9 +8,10 @@
   --color-red-700: #c4161c;
   --color-red-900: #820000;
 
-  --color-grey-100: #bcbec0;
-  --color-grey-300: #94958d;
-  --color-grey-500: #636359;
+  --color-grey-100: #dddfe1;
+  --color-grey-300: #bcbec0;
+  --color-grey-500: #94958d;
+  --color-grey-700: #636359;
 
   --color-biscuit-500: #eceadb;
 
@@ -27,7 +28,7 @@
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl font-medium tracking-wide font-ubuntu text-black/60;
+    @apply text-4xl lg:text-5xl tracking-wide font-ubuntu ;
   }
 
   h2 {
@@ -39,7 +40,7 @@
   }
 
   img {
-    @apply rounded-xl w-full object-cover block;
+    @apply rounded-xl w-full h-full object-cover block;
   }
 
   .intro {
@@ -53,5 +54,4 @@
   p {
     @apply max-w-[60ch] text-pretty pt-4;
   }
-
 }

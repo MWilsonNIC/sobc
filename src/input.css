@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* container */
+  --content-width: clamp(200px, 90%, 1440px);
+
+  --color-red-500: #ff0000;
+  --color-red-700: #c4161c;
+  --color-red-900: #820000;
+
+  --color-grey-100: #bcbec0;
+  --color-grey-300: #94958d;
+  --color-grey-500: #636359;
+
+  --color-biscuit-500: #eceadb;
+
+  --font-ubuntu: font-family: "Ubuntu", sans-serif;
+  --font-ubuntu-light: font-weight: 300;
+  --font-ubuntu-regular: font-weight: 400;
+  --font-ubuntu-medium:  font-weight: 500;
+  --font-ubuntu-bold: font-weight: 700;
+}

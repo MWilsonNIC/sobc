@@ -23,6 +23,6 @@
 
 @layer base {
   main {
-    @apply w-full md:w-(--content-width) md:mx-auto;
+    @apply w-(--content-width) mx-auto;
   }
 }

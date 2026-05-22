@@ -10,12 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet" />
     <link href="src/output.css" rel="stylesheet" />
+    <script defer src="src/menu.js"></script>
   </head>
   <body class="font-ubuntu">
     <!-- HEADER -->
     <header class="bg-white">
       <div
-        class="mx-auto flex w-(--content-width) items-center justify-between py-4">
+        class="mx-auto flex w-(--content-width) items-center justify-between py-8">
         <a href="index.html" class="shrink-0">
           <img
             src="images/logo.png"
@@ -23,8 +24,39 @@
             class="h-20 w-auto" />
         </a>
 
-        <nav class="font-medium">
-          <ul class="flex items-center gap-8">
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="text-black transition-colors hover:text-red-700 lg:hidden">
+          <svg
+            data-icon="open"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            class="h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            data-icon="close"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+            class="hidden h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <nav class="hidden font-medium lg:block">
+          <ul class="flex items-center gap-8 whitespace-nowrap">
             <li>
               <a
                 href="about-us.html"
@@ -122,6 +154,31 @@
           </ul>
         </nav>
       </div>
+      <nav id="mobile-menu" aria-label="Mobile" class="hidden font-medium lg:hidden">
+        <ul class="mx-auto flex w-(--content-width) flex-col gap-4 pb-4">
+          <li>
+            <a href="about-us.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Who We Are</a>
+          </li>
+          <li class="group">
+            <p class="text-black group-has-[[aria-current]]:text-red-700">What We Do</p>
+            <ul class="ml-4 mt-2 flex flex-col gap-2">
+              <li><a href="programs.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Sports and Programs</a></li>
+              <li><a href="calendar.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Calendar</a></li>
+              <li><a href="gallery.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Gallery</a></li>
+            </ul>
+          </li>
+          <li class="group">
+            <p class="text-black group-has-[[aria-current]]:text-red-700">Get Involved</p>
+            <ul class="ml-4 mt-2 flex flex-col gap-2">
+              <li><a href="get-involved.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Register</a></li>
+              <li><a href="donate.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Donate</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="contact.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
       <!-- BREADCRUMB -->
       <nav aria-label="Breadcrumb" class="mx-auto w-(--content-width) py-4">
         <ol class="flex items-center gap-4 text-base">

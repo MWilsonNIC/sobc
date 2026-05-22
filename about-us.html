@@ -256,6 +256,39 @@
     </main>
 
     <!-- FOOTER -->
-    <footer></footer>
+        <!-- FOOTER -->
+    <footer class="mt-24">
+      <!-- Curved divider: biscuit underlay + red overlay -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 200"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        class="block h-32 w-full">
+        <defs>
+          <linearGradient id="footer-red" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="var(--color-red-500)" />
+            <stop offset="100%" stop-color="var(--color-red-700)" />
+          </linearGradient>
+          <linearGradient id="footer-biscuit" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="var(--color-biscuit-500)" />
+            <stop offset="100%" stop-color="#fdfcf7" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0 55 C 300 194, 700 194, 1200 10 L 1200 200 L 0 200 Z"
+          fill="url(#footer-biscuit)" />
+        <path
+          d="M 0 105 C 300 200, 700 200, 1200 75 L 1200 200 L 0 200 Z"
+          fill="url(#footer-red)" />
+      </svg>
+
+      <!-- Full-width red footer body -->
+      <div class="w-full bg-linear-to-r from-red-500 to-red-700">
+        <div class="mx-auto w-(--content-width) py-16 text-biscuit-500">
+          <p>&copy; 2026 Special Olympics BC, Comox Valley</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

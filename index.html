@@ -16,8 +16,7 @@
     <!-- HEADER -->
     <header class="bg-white">
       <div
-        class="mx-auto flex w-(--content-width) items-center justify-between py-8
-        ">
+        class="mx-auto flex w-(--content-width) items-center justify-between py-8">
         <a href="index.html" class="shrink-0">
           <img
             src="images/logo.png"
@@ -41,7 +40,10 @@
             stroke-width="2"
             aria-hidden="true"
             class="h-8 w-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <svg
             data-icon="close"
@@ -52,7 +54,10 @@
             stroke-width="2"
             aria-hidden="true"
             class="hidden h-8 w-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
@@ -155,28 +160,73 @@
           </ul>
         </nav>
       </div>
-      <nav id="mobile-menu" aria-label="Mobile" class="hidden font-medium lg:hidden">
+      <nav
+        id="mobile-menu"
+        aria-label="Mobile"
+        class="hidden font-medium lg:hidden">
         <ul class="mx-auto flex w-(--content-width) flex-col gap-4 pb-4">
           <li>
-            <a href="about-us.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Who We Are</a>
+            <a
+              href="about-us.html"
+              class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+              Who We Are
+            </a>
           </li>
           <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">What We Do</p>
+            <p class="text-black group-has-[[aria-current]]:text-red-700">
+              What We Do
+            </p>
             <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li><a href="programs.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Sports and Programs</a></li>
-              <li><a href="calendar.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Calendar</a></li>
-              <li><a href="gallery.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Gallery</a></li>
+              <li>
+                <a
+                  href="programs.html"
+                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  Sports and Programs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="calendar.html"
+                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  Calendar
+                </a>
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  Gallery
+                </a>
+              </li>
             </ul>
           </li>
           <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">Get Involved</p>
+            <p class="text-black group-has-[[aria-current]]:text-red-700">
+              Get Involved
+            </p>
             <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li><a href="get-involved.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Register</a></li>
-              <li><a href="donate.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Donate</a></li>
+              <li>
+                <a
+                  href="get-involved.html"
+                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  Register
+                </a>
+              </li>
+              <li>
+                <a
+                  href="donate.html"
+                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  Donate
+                </a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="contact.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Contact Us</a>
+            <a
+              href="contact.html"
+              class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>
@@ -185,21 +235,24 @@
     <!-- MAIN -->
     <main>
       <!-- Hero -->
-      <section>
-        <h1>Special Olympics BC - Comox Valley</h1>
-        <p>
-          Special Olympics BC, Comox Valley offers year-round sport training for
-          athletes with intellectual disabilities in a welcoming and supportive
-          community. Whether you are looking to join as an athlete, volunteer,
-          coach, or supporter, we are glad you are here.
-        </p>
-        <a href="#">Register</a>
-        <a href="#">View Sports</a>
-        <a href="View Calendar"></a>
+      <section class="lg:grid lg:grid-cols-2 lg:gap-24 py-24">
+        <div>
+          <h1>Special Olympics BC ~ <span class="text-red-700">Comox Valley</span> </h1>
+          <p class="intro py-6">
+            Special Olympics BC, Comox Valley offers year-round sport training
+            for athletes with intellectual disabilities in a welcoming and
+            supportive community. Whether you are looking to join as an athlete,
+            volunteer, coach, or supporter, we are glad you are here.
+          </p>
+          <a href="#" class="link py-2">Register</a>
+          <a href="#" class="link py-2">View Sports</a>
+          <a href="View Calendar"></a>
+        </div>
+        <img src="images/landscape-sm.png" alt="" class="pt-6 lg:pt-0">
       </section>
 
       <!-- What we do -->
-      <section>
+      <section >
         <h2>What we do</h2>
         <p>
           At Special Olympics BC, sport is the starting point for confidence,

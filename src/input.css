@@ -14,7 +14,7 @@
 
   --color-biscuit-500: #eceadb;
 
-  --font-ubuntu: font-family: "Ubuntu", sans-serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
   /* --font-ubuntu-light: font-weight: 300;
   --font-ubuntu-regular: font-weight: 400;
   --font-ubuntu-medium:  font-weight: 500;
@@ -24,5 +24,21 @@
 @layer base {
   main {
     @apply w-(--content-width) mx-auto;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl font-medium tracking-wide font-ubuntu text-black/60;
+  }
+
+  img {
+    @apply rounded-xl w-full object-cover block;
+  }
+
+  .intro {
+    @apply text-lg;
+  }
+
+  .link {
+    @apply block text-red-700 font-bold text-lg hover:underline hover:underline-offset-4 decoration-red-700 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 after:content-['→'] after:ml-2 after:inline-block after:align-middle after:text-xl after:leading-none after:transition-transform after:duration-200 hover:after:translate-x-1;
   }
 }

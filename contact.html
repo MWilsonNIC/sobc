@@ -9,10 +9,132 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="font-ubuntu">
     <!-- HEADER -->
-    <header></header>
+    <header class="bg-white">
+      <div
+        class="mx-auto flex w-(--content-width) items-center justify-between py-4">
+        <a href="index.html" class="shrink-0">
+          <img
+            src="images/logo.png"
+            alt="BC Special Olympics logo"
+            class="h-20 w-auto" />
+        </a>
+
+        <nav class="font-medium">
+          <ul class="flex items-center gap-8">
+            <li>
+              <a
+                href="about-us.html"
+                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                Who We Are
+              </a>
+            </li>
+
+            <!-- What We Do dropdown -->
+            <li class="group relative">
+              <button
+                type="button"
+                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+                What We Do
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+              <ul
+                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+                <li>
+                  <a
+                    href="programs.html"
+                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                    Sports and Programs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="calendar.html"
+                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                    Calendar
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="gallery.html"
+                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Get Involved dropdown -->
+            <li class="group relative">
+              <button
+                type="button"
+                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+                Get Involved
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+              <ul
+                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+                <li>
+                  <a
+                    href="get-involved.html"
+                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                    Register
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="donate.html"
+                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                    Donate
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="contact.html" aria-current="page"
+                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- BREADCRUMB -->
+      <nav aria-label="Breadcrumb" class="mx-auto w-(--content-width) py-4">
+        <ol class="flex items-center gap-4 text-base">
+          <li>
+            <a href="index.html" class="text-red-700 hover:underline">Home</a>
+          </li>
+          <li aria-hidden="true" class="text-black">/</li>
+          <li>
+            <span aria-current="page" class="text-black">Contact</span>
+          </li>
+        </ol>
+      </nav>
+    </header>
 
     <!-- MAIN -->
     <main>

@@ -14,7 +14,7 @@
   </head>
   <body class="font-ubuntu">
     <!-- HEADER -->
-    <header class="bg-white">
+    <header class="bg-white sticky top-0 z-50">
       <div
         class="mx-auto flex w-(--content-width) items-center justify-between py-8">
         <a href="index.html" class="shrink-0">
@@ -235,74 +235,101 @@
     <!-- MAIN -->
     <main>
       <!-- Hero -->
-      <section class="lg:grid lg:grid-cols-2 lg:gap-24 py-24">
+      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
         <div>
-          <h1>Special Olympics BC ~ <span class="text-red-700">Comox Valley</span> </h1>
+          <h1>
+            Special Olympics BC ~
+            <span class="text-red-700">Comox Valley</span>
+          </h1>
           <p class="intro py-6">
             Special Olympics BC, Comox Valley offers year-round sport training
             for athletes with intellectual disabilities in a welcoming and
             supportive community. Whether you are looking to join as an athlete,
             volunteer, coach, or supporter, we are glad you are here.
           </p>
-          <a href="#" class="link py-2">Register</a>
-          <a href="#" class="link py-2">View Sports</a>
-          <a href="View Calendar"></a>
+          <a href="get-involved.html" class="link py-2">Register</a>
+          <a href="programs.html" class="link py-2">View Sports</a>
+          <a href="calendar.html" class="link py-2">View Calendar</a>
         </div>
-        <img src="images/landscape-sm.png" alt="" class="pt-6 lg:pt-0">
+        <img src="images/landscape-sm.png" alt="" class="pt-6 lg:pt-0" />
       </section>
 
       <!-- What we do -->
-      <section >
-        <h2>What we do</h2>
-        <p>
-          At Special Olympics BC, sport is the starting point for confidence,
-          friendship, health, and personal growth. Our local chapter brings
-          athletes, families, volunteers, and supporters together through
-          programs that build skills, create connections, and celebrate
-          achievement.
-        </p>
-        <p>
-          We welcome new and returning athletes, families, volunteers, and
-          community supporters. If you are not sure where to begin, we are happy
-          to help you find the right program or next step.
-        </p>
-      </section>
+      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
+        <img src="images/landscape-sm.png" alt="" class="hidden lg:block" />
+        <div>
+          <h2>What we do</h2>
+          <div class="lg:py-6">
+            <p class="pt-6">
+              At Special Olympics BC, sport is the starting point for
+              confidence, friendship, health, and personal growth. Our local
+              chapter brings athletes, families, volunteers, and supporters
+              together through programs that build skills, create connections,
+              and celebrate achievement.
+            </p>
+            <p>
+              We welcome new and returning athletes, families, volunteers, and
+              community supporters. If you are not sure where to begin, we are
+              happy to help you find the right program or next step.
+            </p>
+            <p>
+              Our Comox Valley programs change over time based on season,
+              facilities, and volunteer capacity. Visit the Sports page for
+              current offerings, practice information, and local contact
+              details.
+            </p>
+          </div>
 
-      <!-- Programs at a glance    -->
-      <section>
-        <h2>Programs at a glance</h2>
-        <p>
-          Our Comox Valley programs change over time based on season,
-          facilities, and volunteer capacity. Visit the Sports page for current
-          offerings, practice information, and local contact details.
-        </p>
+          <a href="programs.html" class="link py-2">View Sports</a>
+        </div>
       </section>
 
       <!-- Get involved  -->
-      <section>
-        <h2>Get involved</h2>
-        <article>
-          <p>
-            Become an athlete: Join a supportive community where athletes can
-            train, compete, and have fun year-round.
-          </p>
-        </article>
-        <article>
-          <p>
-            Become a volunteer: Help make local programs possible as a coach,
-            helper, organizer, or community supporter.
-          </p>
-        </article>
-        <article>
-          <p>
-            Support the chapter: Your donation helps local athletes access
-            quality programs, equipment, and training opportunities.
-          </p>
-        </article>
+      <section class="pt-12 lg:pt-24">
+        <h2 class="pb-8">Get involved</h2>
+        <div class="lg:grid lg:grid-cols-3 lg:gap-12 text-center">
+          <article>
+            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+              <h3>Become an athlete</h3>
+              <p>
+                Join a supportive community where athletes can train, compete,
+                and have fun year-round.
+              </p>
+              <a href="get-involved.html" class="link py-2">
+                Register as an athlete
+              </a>
+            </div>
+          </article>
+          <article class="pt-6 lg:pt-0">
+            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+              <h3>Become a volunteer</h3>
+              <p>
+                Help make local programs possible as a coach, helper, organizer,
+                or community supporter.
+              </p>
+              <a href="get-involved.html" class="link py-2">
+                Register to volunteer
+              </a>
+            </div>
+          </article>
+          <article class="pt-6 lg:pt-0">
+            <img src="images/landscape-sm.png" alt="" class="rounded-b-none" />
+            <div class="p-6 border-2 rounded-b-xl border-grey-100/50">
+              <h3>Support the chapter</h3>
+              <p>
+                Your donation helps local athletes access quality programs,
+                equipment, and training opportunities.
+              </p>
+              <a href="donate.html" class="link py-2">Donate</a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- Calendar  -->
-      <section>
+      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
         <h2>Stay up to date</h2>
         <p>
           Stay up to date with practices, competitions, deadlines, and local
@@ -310,7 +337,7 @@
         </p>
       </section>
 
-      <!-- CTA -->
+      <!-- Contact -->
       <section>
         <h2>Contact Us</h2>
         <p>Have a question or want help getting started?</p>
@@ -347,8 +374,19 @@
 
       <!-- Full-width red footer body -->
       <div class="w-full bg-linear-to-r from-red-500 to-red-700">
-        <div class="mx-auto w-(--content-width) py-16 text-biscuit-500">
-          <p>&copy; 2026 Special Olympics BC, Comox Valley</p>
+        <div
+          class="mx-auto w-(--content-width) py-16 lg:flex lg:justify-between">
+          <p class="text-sm tracking-wide text-biscuit-500">
+            We are grateful for the privilege to live, work, and play on the
+            unceded traditional territory of the K’ómoks First Nation and
+            acknowledge the rich culture of the Pentlatch, Sathloot
+            (‘sath-loot), Sasitla (sa-‘seet-la), Ieeksen (eye-‘ick-sun) and
+            Xa’xe (‘ha-hey) peoples.
+          </p>
+          <img
+            src="images/logo-biscuit.png"
+            alt=""
+            class="w-70 self-start object-contain pt-6 lg:pt-0" />
         </div>
       </div>
     </footer>

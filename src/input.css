@@ -30,6 +30,14 @@
     @apply text-4xl lg:text-5xl font-medium tracking-wide font-ubuntu text-black/60;
   }
 
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl lg:text-2xl;
+  }
+
   img {
     @apply rounded-xl w-full object-cover block;
   }
@@ -41,4 +49,9 @@
   .link {
     @apply block text-red-700 font-bold text-lg hover:underline hover:underline-offset-4 decoration-red-700 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 after:content-['→'] after:ml-2 after:inline-block after:align-middle after:text-xl after:leading-none after:transition-transform after:duration-200 hover:after:translate-x-1;
   }
+
+  p {
+    @apply max-w-[60ch] text-pretty pt-4;
+  }
+
 }

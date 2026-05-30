@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2.18734722px;
+      }
+    </style>
+  </defs>
+  <g id="bocce">
+    <circle class="cls-1" cx="24.44942885" cy="31.75858952" r="23.19503224"/>
+    <circle cx="57.26001661" cy="48.74445059" r="6.21188488"/>
+    <path class="cls-1" d="M20.56479677,8.8911639s19.14363134,20.84061049,7.76926417,45.73485124"/>
+    <path class="cls-1" d="M46.74434675,24.50381133S25.90373626,43.64744268,1.00949552,32.27307551"/>
+  </g>
+</svg>

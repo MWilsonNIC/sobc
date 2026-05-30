@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOBC | Comox Valley</title>
+    <title>Comox Valley</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,15 +16,19 @@
     <script defer src="src/menu.js"></script>
   </head>
   <body class="font-ubuntu">
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- HEADER -->
-    <header class="bg-white sticky top-0 z-50">
+    <header id="site-header" class="site-header bg-white sticky top-0 z-50">
       <div
-        class="mx-auto flex w-(--content-width) items-center justify-between py-8">
+        class="header-inner mx-auto flex w-(--content-width) items-center justify-between">
         <a href="index.html" class="shrink-0">
           <img
             src="images/logo.png"
             alt="BC Special Olympics logo"
-            class="h-20 w-auto" />
+            class="header-logo" />
         </a>
 
         <button
@@ -61,209 +68,221 @@
           </svg>
         </button>
 
-        <nav class="hidden font-medium lg:block">
-          <ul class="flex items-center gap-8 whitespace-nowrap">
+        <nav class="hidden lg:block">
+          <ul class="flex items-center gap-6 whitespace-nowrap">
             <li>
-              <a
-                href="about-us.html"
-                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                Who We Are
-              </a>
+              <a href="about-us.html" class="nav-link">Who We Are</a>
             </li>
 
             <!-- What We Do dropdown -->
             <li class="group relative">
-              <button
-                type="button"
-                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+              <a
+                href="programs.html"
+                aria-haspopup="true"
+                class="nav-link flex items-center gap-1">
                 What We Do
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-4 w-4">
+                  aria-hidden="true"
+                  class="h-4 w-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180">
                   <path
                     fill-rule="evenodd"
                     d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
                     clip-rule="evenodd" />
                 </svg>
-              </button>
-              <ul
-                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              </a>
+              <ul class="nav-dropdown">
                 <li>
-                  <a
-                    href="programs.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  <a href="programs.html" class="dropdown-link">
                     Sports and Programs
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="calendar.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Calendar
-                  </a>
+                  <a href="calendar.html" class="dropdown-link">Calendar</a>
                 </li>
                 <li>
-                  <a
-                    href="gallery.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Gallery
-                  </a>
+                  <a href="gallery.html" class="dropdown-link">Gallery</a>
                 </li>
               </ul>
             </li>
 
             <!-- Get Involved dropdown -->
             <li class="group relative">
-              <button
-                type="button"
-                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+              <a
+                href="get-involved.html"
+                aria-haspopup="true"
+                class="nav-link flex items-center gap-1">
                 Get Involved
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-4 w-4">
+                  aria-hidden="true"
+                  class="h-4 w-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180">
                   <path
                     fill-rule="evenodd"
                     d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
                     clip-rule="evenodd" />
                 </svg>
-              </button>
-              <ul
-                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              </a>
+              <ul class="nav-dropdown">
                 <li>
-                  <a
-                    href="get-involved.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Register
-                  </a>
+                  <a href="get-involved.html" class="dropdown-link">Register</a>
                 </li>
                 <li>
-                  <a
-                    href="donate.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Donate
-                  </a>
+                  <a href="resources.html" class="dropdown-link">Resources</a>
+                </li>
+                <li>
+                  <a href="donate.html" class="dropdown-link">Donate</a>
                 </li>
               </ul>
             </li>
 
             <li>
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+
+            <li>
               <a
-                href="contact.html"
-                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                Contact Us
+                href="get-involved.html"
+                class="btn-primary px-6 py-2 text-base">
+                Register
               </a>
             </li>
           </ul>
         </nav>
       </div>
+      <!-- Mobile menu (full-screen overlay) -->
       <nav
         id="mobile-menu"
         aria-label="Mobile"
-        class="hidden font-medium lg:hidden">
-        <ul class="mx-auto flex w-(--content-width) flex-col gap-4 pb-4">
-          <li>
-            <a
-              href="about-us.html"
-              class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-              Who We Are
+        hidden
+        class="fixed inset-0 z-50 overflow-y-auto bg-white opacity-0 transition-opacity duration-200 lg:hidden">
+        <div class="w-(--content-width) mx-auto">
+          <div class="flex items-center justify-between py-8">
+            <a href="index.html" class="shrink-0">
+              <img
+                src="images/logo.png"
+                alt="BC Special Olympics logo"
+                class="h-20 w-auto" />
             </a>
-          </li>
-          <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">
-              What We Do
-            </p>
-            <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li>
-                <a
-                  href="programs.html"
-                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                  Sports and Programs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="calendar.html"
-                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                  Calendar
-                </a>
-              </li>
-              <li>
-                <a
-                  href="gallery.html"
-                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                  Gallery
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">
-              Get Involved
-            </p>
-            <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li>
-                <a
-                  href="get-involved.html"
-                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                  Register
-                </a>
-              </li>
-              <li>
-                <a
-                  href="donate.html"
-                  class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                  Donate
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="contact.html"
-              class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-              Contact Us
-            </a>
-          </li>
-        </ul>
+            <button
+              id="mobile-menu-close"
+              type="button"
+              aria-label="Close menu"
+              class="text-black transition-colors hover:text-red-700 focus-visible:text-red-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+                class="h-8 w-8">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <ul class="divide-y divide-biscuit-500">
+            <li>
+              <a href="about-us.html" class="mobile-nav-link">Who We Are</a>
+            </li>
+            <li>
+              <a href="programs.html" class="mobile-nav-link">What We Do</a>
+              <ul class="pb-4 flex flex-col">
+                <li>
+                  <a href="programs.html" class="mobile-nav-sublink">
+                    Sports and Programs
+                  </a>
+                </li>
+                <li>
+                  <a href="calendar.html" class="mobile-nav-sublink">Calendar</a>
+                </li>
+                <li>
+                  <a href="gallery.html" class="mobile-nav-sublink">Gallery</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="get-involved.html" class="mobile-nav-link">
+                Get Involved
+              </a>
+              <ul class="pb-4 flex flex-col">
+                <li>
+                  <a href="get-involved.html" class="mobile-nav-sublink">
+                    Register
+                  </a>
+                </li>
+                <li>
+                  <a href="resources.html" class="mobile-nav-sublink">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="donate.html" class="mobile-nav-sublink">Donate</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="py-8">
+            <a href="get-involved.html" class="btn-outline">Register</a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main id="main">
       <!-- Hero -->
-      <section class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
-        <div>
-          <h1>
-            Special Olympics BC ~
-            <span class="text-red-700 font-bold whitespace-nowrap">
-              Comox Valley
-            </span>
-          </h1>
-          <p class="intro py-6">
-            Special Olympics BC, Comox Valley offers year-round sport training
-            for athletes with intellectual disabilities in a welcoming and
-            supportive community. Whether you are looking to join as an athlete,
-            volunteer, coach, or supporter, we are glad you are here.
-          </p>
-          <a href="get-involved.html" class="link py-2">Register</a>
-          <a href="programs.html" class="link py-2">View Sports</a>
-          <a href="calendar.html" class="link py-2">View Calendar</a>
-        </div>
-        <img src="images/landscape-sm.png" alt="" class="mt-6 lg:mt-0" />
-      </section>
+      <div class="relative">
+        <img
+          src="images/swoosh.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute inset-0 w-full h-full object-cover pointer-events-none select-none -z-10" />
+        <section
+          class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24 pb-12 lg:pb-20">
+          <div>
+            <h1>
+              Special Olympics BC –
+              <span class="text-red-700 font-bold whitespace-nowrap">
+                Comox Valley
+              </span>
+            </h1>
+            <p class="intro">
+              Special Olympics BC, Comox Valley offers year-round sport training
+              for athletes with intellectual disabilities in a welcoming and
+              supportive community. Whether you are looking to join as an
+              athlete, volunteer, coach, or supporter, we are glad you are here.
+            </p>
+            <a href="get-involved.html" class="link">Register</a>
+            <a href="programs.html" class="link">View Sports</a>
+            <a href="calendar.html" class="link">View Calendar</a>
+          </div>
+          <img src="images/landscape-sm.png" alt="" class="mt-6 lg:mt-0 aspect-[3/2]" />
+        </section>
+      </div>
 
       <!-- What we do -->
-      <section
-        class="lg:grid lg:grid-cols-2 lg:gap-24 mt-12 lg:mt-24 bg-biscuit-500/40 rounded-xl p-8">
-        <img src="images/landscape-sm.png" alt="" class="hidden lg:block" />
-        <div>
-          <h2>What we do</h2>
-          <div class="lg:py-6">
-            <p class="pt-6">
+      <div
+        class="py-12 lg:py-20"
+        style="background: linear-gradient(to bottom, white, #f7f6f3)">
+        <section
+          class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24">
+          <img src="images/landscape-sm.png" alt="" class="hidden lg:block aspect-[3/2]" />
+          <div>
+            <h2>What we do</h2>
+            <p>
               At Special Olympics BC, sport is the starting point for
               confidence, friendship, health, and personal growth. Our local
               chapter brings athletes, families, volunteers, and supporters
@@ -281,88 +300,87 @@
               current offerings, practice information, and local contact
               details.
             </p>
+            <a href="programs.html" class="link">View Sports</a>
           </div>
-          <a href="programs.html" class="link py-2">View Sports</a>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- Get involved  -->
-      <section class="pt-12 lg:pt-24">
-        <h2 class="pb-8">Get involved</h2>
-        <div class="lg:grid lg:grid-cols-3 lg:gap-12 text-center">
-          <!-- Become an athlete -->
-          <article>
-            <img
-              src="images/landscape-sm.png"
-              alt=""
-              class="rounded-b-none h-fit" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
-              <h3>Become an athlete</h3>
-              <p class="mx-auto">
-                Join a supportive community where athletes can train, compete,
-                and have fun year-round.
-              </p>
-              <a href="get-involved.html" class="link py-4">
-                Register as an athlete
-              </a>
-            </div>
-          </article>
+      <section class="py-12 lg:py-20 bg-biscuit-50">
+        <div class="w-(--content-width) mx-auto">
+          <h2>Get involved</h2>
+          <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+            <!-- Become an athlete -->
+            <a href="get-involved.html" class="card">
+              <img
+                src="images/landscape-sm.png"
+                alt=""
+                class="aspect-[3/2] rounded-none" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3>Become an athlete</h3>
+                <p>
+                  Join a supportive community where athletes can train, compete,
+                  and have fun year-round.
+                </p>
+                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+              </div>
+            </a>
 
-          <!-- Become a Volunteer -->
-          <article class="pt-6 lg:pt-0">
-            <img
-              src="images/landscape-sm.png"
-              alt=""
-              class="rounded-b-none h-fit" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
-              <h3>Become a volunteer</h3>
-              <p class="mx-auto">
-                Help make local programs possible as a coach, helper, organizer,
-                or community supporter.
-              </p>
-              <a href="get-involved.html" class="link py-4">
-                Register to volunteer
-              </a>
-            </div>
-          </article>
+            <!-- Become a Volunteer -->
+            <a href="get-involved.html" class="mt-6 lg:mt-0 card">
+              <img
+                src="images/landscape-sm.png"
+                alt=""
+                class="aspect-[3/2] rounded-none" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3>Become a volunteer</h3>
+                <p>
+                  Help make local programs possible as a coach, helper,
+                  organizer, or community supporter.
+                </p>
+                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+              </div>
+            </a>
 
-          <!-- Support the chapter -->
-          <article class="pt-6 lg:pt-0">
-            <img
-              src="images/landscape-sm.png"
-              alt=""
-              class="rounded-b-none h-fit" />
-            <div class="p-6 border-2 rounded-b-xl border-grey-100/70">
-              <h3>Support the chapter</h3>
-              <p class="mx-auto">
-                Your donation helps local athletes access quality programs,
-                equipment, and training opportunities.
-              </p>
-              <a href="donate.html" class="link py-4">Donate</a>
-            </div>
-          </article>
+            <!-- Support the chapter -->
+            <a href="donate.html" class="mt-6 lg:mt-0 card">
+              <img
+                src="images/landscape-sm.png"
+                alt=""
+                class="aspect-[3/2] rounded-none" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3>Support the chapter</h3>
+                <p>
+                  Your donation helps local athletes access quality programs,
+                  equipment, and training opportunities.
+                </p>
+                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
-      <div class="lg:grid lg:grid-cols-2 lg:gap-24 pt-12 lg:pt-24">
+      <div
+        class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24 py-12 lg:py-20">
         <!-- Calendar  -->
-        <section class="p-8 bg-biscuit-500/40 rounded-xl">
+        <section class="box box-small">
           <h2>Stay up to date</h2>
           <p>
             Stay up to date with practices, competitions, deadlines, and local
             events through our calendar.
           </p>
-          <a href="calendar.html" class="link py-4">View Calendar</a>
+          <a href="calendar.html" class="link">View Calendar</a>
         </section>
 
         <!-- Contact -->
-        <section class="mt-12 lg:mt-0 p-8">
+        <section class="mt-8 lg:mt-0 p-8">
           <h2>Contact Us</h2>
           <p>
             Have a question or want help getting started? Contact our local
             team. We would be happy to hear from you.
           </p>
-          <a href="contact.html" class="link py-4">Contact Us</a>
+          <a href="contact.html" class="link">Contact Us</a>
         </section>
       </div>
     </main>
@@ -394,21 +412,29 @@
           fill="url(#footer-red)" />
       </svg>
 
-      <!-- Full-width red footer body -->
+      <!-- Red band: territorial ack + logo + attribution + copyright -->
       <div class="w-full bg-linear-to-r from-red-500 to-red-700">
-        <div
-          class="mx-auto w-(--content-width) py-16 lg:flex lg:justify-between">
-          <p class="text-sm tracking-wide text-biscuit-500">
-            We are grateful for the privilege to live, work, and play on the
-            unceded traditional territory of the K’ómoks First Nation and
-            acknowledge the rich culture of the Pentlatch, Sathloot
-            (‘sath-loot), Sasitla (sa-‘seet-la), Ieeksen (eye-‘ick-sun) and
-            Xa’xe (‘ha-hey) peoples.
-          </p>
-          <img
-            src="images/logo-biscuit.png"
-            alt=""
-            class="w-70 self-start object-contain pt-6 lg:pt-0" />
+        <div class="mx-auto w-(--content-width) py-12 lg:py-16">
+          <div class="lg:flex lg:justify-between lg:gap-12">
+            <p class="text-sm tracking-wide text-biscuit-500">
+              We are grateful for the privilege to live, work, and play on the
+              unceded traditional territory of the K’ómoks First Nation and
+              acknowledge the rich culture of the Pentlatch, Sathloot
+              (‘sath-loot), Sasitla (sa-‘seet-la), Ieeksen (eye-‘ick-sun) and
+              Xa’xe (‘ha-hey) peoples.
+            </p>
+            <img
+              src="images/logo-biscuit.png"
+              alt=""
+              class="w-70 self-start object-contain pt-6 lg:pt-0" />
+          </div>
+          <div
+            class="mt-8 text-xs text-biscuit-500 lg:flex lg:justify-between">
+            <p>An accredited program of Special Olympics BC</p>
+            <p class="mt-2 lg:mt-0">
+              © 2026 Special Olympics BC, Comox Valley
+            </p>
+          </div>
         </div>
       </div>
     </footer>

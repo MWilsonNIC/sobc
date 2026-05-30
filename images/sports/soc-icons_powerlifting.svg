@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.58356635px;
+      }
+    </style>
+  </defs>
+  <g id="power_lifting" data-name="power lifting">
+    <line class="cls-1" x1="14.04138988" y1="43.53115592" x2="49.95861012" y2="20.33114207"/>
+    <line class="cls-1" x1="6.64246655" y1="32.07647487" x2="21.44031321" y2="54.98583696"/>
+    <line class="cls-1" x1="42.55968679" y1="8.87646102" x2="57.35753345" y2="31.78582312"/>
+    <line class="cls-1" x1="49.70260476" y1="7.8570151" x2="61.22402461" y2="25.69396024"/>
+    <line class="cls-1" x1="2.77597539" y1="38.16833774" x2="14.29739524" y2="56.00528288"/>
+  </g>
+</svg>

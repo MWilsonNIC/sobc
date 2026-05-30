@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 6.37820202px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 1.08105119px;
+      }
+    </style>
+  </defs>
+  <g id="athletics">
+    <circle class="cls-2" cx="45.77230859" cy="10.55834284" r="6.78242542"/>
+    <polyline class="cls-1" points="18.99527214 26.13722123 29.77767309 13.95557741 46.65089594 29.5941742 55.86943721 19.1203421"/>
+    <line class="cls-1" x1="37.43235467" y1="21.77487581" x2="8.13056279" y2="59.71905013"/>
+    <polyline class="cls-1" points="27.04984495 35.21964261 34.79848574 41.19965919 25.41532767 54.45131226"/>
+    <rect class="cls-2" x="29.37124297" y="22.22832369" width="7.01352999" height="16.93818206" transform="translate(24.12123423 -13.42302943) rotate(35.73858251)"/>
+  </g>
+</svg>

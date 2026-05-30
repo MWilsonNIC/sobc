@@ -1,57 +1,279 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Theme tokens
+   ============================================================ */
+
 @theme {
-  /* container */
   --content-width: clamp(200px, 90%, 1440px);
 
-  --color-red-500: #ff0000;
-  --color-red-700: #c4161c;
-  --color-red-900: #820000;
+  --color-red-500: #ff0000; /* SO Red — footer gradient only */
+  --color-red-700: #c4161c; /* Mid Red — primary brand red */
 
-  --color-grey-100: #dddfe1;
-  --color-grey-300: #bcbec0;
-  --color-grey-500: #94958d;
-  --color-grey-700: #636359;
+  --color-grey-700: #636359; /* SO Grey */
 
-  --color-biscuit-500: #eceadb;
+  --color-biscuit-50: #f7f6f3; /* very light section backgrounds */
+  --color-biscuit-500: #eceadb; /* brand Biscuit — borders, accents */
 
   --font-ubuntu: "Ubuntu", sans-serif;
-  /* --font-ubuntu-light: font-weight: 300;
-  --font-ubuntu-regular: font-weight: 400;
-  --font-ubuntu-medium:  font-weight: 500;
-  --font-ubuntu-bold: font-weight: 700; */
 }
 
 @layer base {
-  main {
-    @apply w-(--content-width) mx-auto;
+  /* Icons used as SVG masks elsewhere in this file — held in custom
+     properties so the long data URIs don't have to live inside Tailwind
+     arbitrary-value brackets. */
+  :root {
+    --arrow-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12h14M13 6l6 6-6 6'/></svg>");
+    --external-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/><polyline points='15 3 21 3 21 9'/><path d='M10 14 21 3'/></svg>");
   }
 
+  /* ============================================================
+     Typography
+     ============================================================ */
+
   h1 {
-    @apply text-4xl lg:text-5xl tracking-wide font-ubuntu ;
+    @apply text-5xl lg:text-6xl leading-tight font-bold font-ubuntu;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl;
+    @apply text-3xl lg:text-4xl leading-snug;
   }
 
   h3 {
-    @apply text-xl lg:text-2xl;
-  }
-
-  img {
-    @apply rounded-xl w-full h-full object-cover block;
-  }
-
-  .intro {
-    @apply text-lg;
-  }
-
-  .link {
-    @apply block text-red-700 font-bold text-lg hover:underline hover:underline-offset-4 decoration-red-700 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 after:content-['→'] after:ml-2 after:inline-block after:align-middle after:text-xl after:leading-none after:transition-transform after:duration-200 hover:after:translate-x-1;
+    @apply text-xl lg:text-2xl leading-snug;
   }
 
   p {
-    @apply max-w-[60ch] text-pretty pt-4;
+    @apply max-w-[60ch] text-pretty leading-relaxed;
+  }
+
+  .intro {
+    @apply text-lg leading-relaxed;
+  }
+
+  img {
+    @apply rounded-xl w-full object-cover block;
+  }
+
+  /* ============================================================
+     Vertical rhythm (sibling selectors)
+     -----------------------------------------------------------
+     Spacing is driven by what follows a heading or paragraph,
+     so the same pattern produces the same gap on every page.
+
+     Scale (tight):
+       h1 → next     24px   (mt-6)
+       h2 → next     16px   (mt-4)
+       h3 → next     12px   (mt-3)
+       .intro → next 24px   (mt-6)
+       p → p         16px   (mt-4)
+       p → .link     24px   (mt-6)
+       .link → .link 12px   (mt-3)
+
+     Override with an explicit utility (e.g. mt-8) when a
+     specific layout needs more space.
+     ============================================================ */
+
+  h1 + * {
+    @apply mt-6;
+  }
+
+  h2 + *,
+  .heading-row + * {
+    @apply mt-4;
+  }
+
+  h3 + * {
+    @apply mt-3;
+  }
+
+  .intro + * {
+    @apply mt-6;
+  }
+
+  p + p {
+    @apply mt-4;
+  }
+
+  p + .link {
+    @apply mt-6;
+  }
+
+  .link + .link {
+    @apply mt-3;
+  }
+
+  /* ============================================================
+     Links — inline action with animated arrow icon
+     ============================================================ */
+
+  .link {
+    @apply block text-red-700 font-bold text-lg hover:underline hover:underline-offset-4 decoration-red-700 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  a:hover .link {
+    @apply underline underline-offset-4;
+  }
+
+  /* Arrow icon — SVG mask coloured by currentColor */
+  .link::after {
+    @apply content-[''] inline-block w-[1.25em] h-[1.25em] ml-2 align-middle bg-current mask-no-repeat mask-center mask-contain [mask-image:var(--arrow-icon)] [-webkit-mask-image:var(--arrow-icon)] transition-transform duration-200;
+  }
+
+  .link:hover::after,
+  a:hover .link::after {
+    @apply translate-x-1;
+  }
+
+  /* External links: swap the arrow for the "opens in new tab" icon,
+     shrink it, and align it to the top of the text line so it reads as
+     an upper-right indicator. Also drop the slide-on-hover animation
+     (the icon doesn't point right). */
+  .link[target="_blank"]::after {
+    @apply align-baseline [mask-image:var(--external-icon)] [-webkit-mask-image:var(--external-icon)];
+  }
+
+  .link[target="_blank"]:hover::after,
+  a:hover .link[target="_blank"]::after {
+    @apply translate-x-0;
+  }
+
+  /* ============================================================
+     Buttons — primary and outline are mirrors of each other,
+     so hover smoothly flips between the two states.
+     ============================================================ */
+
+  .btn-primary {
+    @apply block w-full text-center lg:inline-block lg:w-auto border-2 border-red-700 bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors hover:bg-transparent hover:text-red-700 cursor-pointer focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-outline {
+    @apply block w-full text-center lg:inline-block lg:w-auto border-2 border-red-700 bg-transparent text-red-700 font-bold text-lg px-8 py-4 rounded-lg transition-colors hover:bg-red-700 hover:text-white cursor-pointer focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  /* ============================================================
+     Surfaces — boxes and cards
+     ============================================================ */
+
+  .box {
+    @apply bg-biscuit-50 rounded-xl p-12;
+  }
+
+  .box-small {
+    @apply p-8;
+  }
+
+  .card {
+    @apply relative flex flex-col rounded-xl border border-biscuit-500 bg-white overflow-hidden;
+  }
+
+  a.card {
+    @apply transition-colors hover:border-red-700 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  /* Decorative arrow shown at the bottom of an a.card so a card-shaped
+     link gets the same visual cue as a .link CTA. Slides on card hover. */
+  .card-arrow {
+    @apply inline-block size-6 bg-red-700 mask-no-repeat mask-center mask-contain transition-transform duration-200 [mask-image:var(--arrow-icon)] [-webkit-mask-image:var(--arrow-icon)];
+  }
+
+  a.card:hover .card-arrow {
+    @apply translate-x-1;
+  }
+
+  /* "Opens in new tab" badge for external card links. Positioned in
+     the upper-right corner of the card. */
+  .card-external-marker {
+    @apply absolute top-3 right-3 size-5 bg-red-700 mask-no-repeat mask-center mask-contain [mask-image:var(--external-icon)] [-webkit-mask-image:var(--external-icon)];
+  }
+
+  /* ============================================================
+     Skip link — first focusable element, visible only on focus
+     ============================================================ */
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-red-700 focus:text-white focus:font-bold focus:px-6 focus:py-3 focus:rounded-lg focus:outline-solid focus:outline-2 focus:outline-offset-2;
+  }
+
+  /* ============================================================
+     Header — sticky, shrinks on scroll via the .is-scrolled class
+     added by menu.js. Default sizes live here (not in HTML
+     utilities) so the .is-scrolled rules win the cascade.
+     ============================================================ */
+
+  .site-header {
+    @apply transition-[border-color] duration-500 ease-out;
+  }
+
+  .header-inner {
+    @apply py-8 transition-[padding] duration-500 ease-out;
+  }
+
+  .header-logo {
+    @apply h-20 w-auto transition-[height] duration-500 ease-out;
+  }
+
+  .site-header.is-scrolled {
+    @apply border-b border-biscuit-500;
+  }
+
+  .site-header.is-scrolled .header-inner {
+    @apply py-4;
+  }
+
+  .site-header.is-scrolled .header-logo {
+    @apply h-14;
+  }
+
+  /* ============================================================
+     Desktop navbar
+     ============================================================ */
+
+  .nav-link {
+    @apply relative px-3 py-3 font-medium text-black transition-colors hover:text-red-700 focus-visible:text-red-700;
+  }
+
+  /* Active-page colour — applies to the link itself OR a dropdown
+     trigger whose dropdown contains the current page. */
+  .nav-link[aria-current],
+  .group:has([aria-current]) > .nav-link {
+    @apply text-red-700;
+  }
+
+  /* Active-page bar (2.5px red accent under the link) */
+  .nav-link[aria-current]::after,
+  .group:has([aria-current]) > .nav-link::after {
+    @apply content-[''] absolute left-3 right-3 bottom-2 h-[2.5px] bg-red-700;
+  }
+
+  .nav-dropdown {
+    @apply invisible absolute left-0 top-full z-10 mt-1 min-w-52 rounded-xl border border-biscuit-500 bg-white py-2 opacity-0 transition-all duration-150;
+  }
+
+  .group:hover > .nav-dropdown,
+  .group:focus-within > .nav-dropdown {
+    @apply visible opacity-100;
+  }
+
+  /* Invisible hover buffer covering the gap between trigger and
+     panel so the dropdown stays open as the cursor traverses. */
+  .nav-dropdown::before {
+    @apply content-[''] absolute -top-2 inset-x-0 h-2;
+  }
+
+  .dropdown-link {
+    @apply block px-4 py-2 text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
+  }
+
+  /* ============================================================
+     Mobile navbar — full-screen overlay opened via menu.js
+     ============================================================ */
+
+  .mobile-nav-link {
+    @apply block py-3 text-xl font-bold text-black transition-colors hover:text-red-700 focus-visible:text-red-700 aria-[current]:text-red-700;
+  }
+
+  .mobile-nav-sublink {
+    @apply block py-3 pl-4 text-base text-grey-700 transition-colors hover:text-red-700 focus-visible:text-red-700 aria-[current]:text-red-700;
   }
 }

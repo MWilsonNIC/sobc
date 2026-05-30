@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOBC-CV | Volunteer Registration</title>
+    <title>Comox Valley | Volunteer Registration</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -11,15 +14,17 @@
     <script defer src="../src/menu.js"></script>
   </head>
   <body class="font-ubuntu">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- HEADER -->
-    <header class="bg-white sticky top-0 z-50">
+    <header id="site-header" class="site-header bg-white sticky top-0 z-50">
       <div
-        class="mx-auto flex w-(--content-width) items-center justify-between py-8">
+        class="header-inner mx-auto flex w-(--content-width) items-center justify-between">
         <a href="../index.html" class="shrink-0">
           <img
             src="../images/logo.png"
             alt="BC Special Olympics logo"
-            class="h-20 w-auto" />
+            class="header-logo" />
         </a>
 
         <button
@@ -38,7 +43,10 @@
             stroke-width="2"
             aria-hidden="true"
             class="h-8 w-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <svg
             data-icon="close"
@@ -49,162 +57,213 @@
             stroke-width="2"
             aria-hidden="true"
             class="hidden h-8 w-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
-        <nav class="hidden font-medium lg:block">
-          <ul class="flex items-center gap-8 whitespace-nowrap">
+        <nav class="hidden lg:block">
+          <ul class="flex items-center gap-6 whitespace-nowrap">
             <li>
-              <a
-                href="../about-us.html"
-                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+              <a href="../about-us.html" class="nav-link">
                 Who We Are
               </a>
             </li>
 
-            <!-- What We Do dropdown -->
             <li class="group relative">
-              <button
-                type="button"
-                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+              <a
+                href="../programs.html"
+                aria-haspopup="true"
+                class="nav-link flex items-center gap-1">
                 What We Do
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-4 w-4">
+                  aria-hidden="true"
+                  class="h-4 w-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180">
                   <path
                     fill-rule="evenodd"
                     d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
                     clip-rule="evenodd" />
                 </svg>
-              </button>
-              <ul
-                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              </a>
+              <ul class="nav-dropdown">
                 <li>
-                  <a
-                    href="../programs.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
+                  <a href="../programs.html" class="dropdown-link">
                     Sports and Programs
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../calendar.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Calendar
-                  </a>
+                  <a href="../calendar.html" class="dropdown-link">Calendar</a>
                 </li>
                 <li>
-                  <a
-                    href="../gallery.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Gallery
-                  </a>
+                  <a href="../gallery.html" class="dropdown-link">Gallery</a>
                 </li>
               </ul>
             </li>
 
-            <!-- Get Involved dropdown -->
             <li class="group relative">
-              <button
-                type="button"
-                class="flex items-center gap-1 text-black transition-colors group-hover:text-red-700 group-has-[[aria-current]]:text-red-700">
+              <a
+                href="../get-involved.html"
+                aria-haspopup="true"
+                class="nav-link flex items-center gap-1">
                 Get Involved
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-4 w-4">
+                  aria-hidden="true"
+                  class="h-4 w-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180">
                   <path
                     fill-rule="evenodd"
                     d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
                     clip-rule="evenodd" />
                 </svg>
-              </button>
-              <ul
-                class="invisible absolute left-0 top-full z-10 min-w-52 bg-white py-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              </a>
+              <ul class="nav-dropdown">
                 <li>
-                  <a
-                    href="../get-involved.html" aria-current="section"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Register
-                  </a>
+                  <a href="../get-involved.html" aria-current="page" class="dropdown-link">Register</a>
                 </li>
                 <li>
-                  <a
-                    href="../donate.html"
-                    class="block px-4 py-2 text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                    Donate
-                  </a>
+                  <a href="../resources.html" class="dropdown-link">Resources</a>
+                </li>
+                <li>
+                  <a href="../donate.html" class="dropdown-link">Donate</a>
                 </li>
               </ul>
             </li>
 
             <li>
+              <a href="../contact.html" class="nav-link">Contact Us</a>
+            </li>
+
+            <li>
               <a
-                href="../contact.html"
-                class="text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">
-                Contact Us
+                href="../get-involved.html"
+                class="btn-primary px-6 py-2 text-base">
+                Register
               </a>
             </li>
           </ul>
         </nav>
       </div>
-      <nav id="mobile-menu" aria-label="Mobile" class="hidden font-medium lg:hidden">
-        <ul class="mx-auto flex w-(--content-width) flex-col gap-4 pb-4">
-          <li>
-            <a href="../about-us.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Who We Are</a>
-          </li>
-          <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">What We Do</p>
-            <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li><a href="../programs.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Sports and Programs</a></li>
-              <li><a href="../calendar.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Calendar</a></li>
-              <li><a href="../gallery.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Gallery</a></li>
-            </ul>
-          </li>
-          <li class="group">
-            <p class="text-black group-has-[[aria-current]]:text-red-700">Get Involved</p>
-            <ul class="ml-4 mt-2 flex flex-col gap-2">
-              <li><a href="../get-involved.html" aria-current="section" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Register</a></li>
-              <li><a href="../donate.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Donate</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="../contact.html" class="block text-black transition-colors hover:text-red-700 aria-[current]:text-red-700 aria-[current]:underline aria-[current]:underline-offset-8">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- BREADCRUMB -->
-      <nav aria-label="Breadcrumb" class="mx-auto w-(--content-width) py-4">
-        <ol class="flex items-center gap-4 text-base">
-          <li>
-            <a href="../index.html" class="text-red-700 hover:underline">Home</a>
-          </li>
-          <li aria-hidden="true" class="text-black">/</li>
-          <li>
-            <span class="text-black">Get Involved</span>
-          </li>
-          <li aria-hidden="true" class="text-black">/</li>
-          <li>
-            <a href="../get-involved.html" class="text-red-700 hover:underline">Register</a>
-          </li>
-          <li aria-hidden="true" class="text-black">/</li>
-          <li>
-            <span aria-current="page" class="text-black">Volunteer Registration</span>
-          </li>
-        </ol>
+
+      <!-- Mobile menu (full-screen overlay) -->
+      <nav
+        id="mobile-menu"
+        aria-label="Mobile"
+        hidden
+        class="fixed inset-0 z-50 overflow-y-auto bg-white opacity-0 transition-opacity duration-200 lg:hidden">
+        <div class="w-(--content-width) mx-auto">
+          <div class="flex items-center justify-between py-8">
+            <a href="../index.html" class="shrink-0">
+              <img
+                src="../images/logo.png"
+                alt="BC Special Olympics logo"
+                class="header-logo" />
+            </a>
+            <button
+              id="mobile-menu-close"
+              type="button"
+              aria-label="Close menu"
+              class="text-black transition-colors hover:text-red-700 focus-visible:text-red-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+                class="h-8 w-8">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <ul class="divide-y divide-biscuit-500">
+            <li>
+              <a href="../about-us.html" class="mobile-nav-link">
+                Who We Are
+              </a>
+            </li>
+            <li>
+              <a href="../programs.html" class="mobile-nav-link">What We Do</a>
+              <ul class="pb-4 flex flex-col">
+                <li>
+                  <a href="../programs.html" class="mobile-nav-sublink">
+                    Sports and Programs
+                  </a>
+                </li>
+                <li>
+                  <a href="../calendar.html" class="mobile-nav-sublink">Calendar</a>
+                </li>
+                <li>
+                  <a href="../gallery.html" class="mobile-nav-sublink">Gallery</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../get-involved.html" class="mobile-nav-link">
+                Get Involved
+              </a>
+              <ul class="pb-4 flex flex-col">
+                <li>
+                  <a href="../get-involved.html" aria-current="page" class="mobile-nav-sublink">
+                    Register
+                  </a>
+                </li>
+                <li>
+                  <a href="../resources.html" class="mobile-nav-sublink">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="../donate.html" class="mobile-nav-sublink">Donate</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../contact.html" class="mobile-nav-link">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="py-8">
+            <a href="../get-involved.html" class="btn-outline">Register</a>
+          </div>
+        </div>
       </nav>
     </header>
 
+
+    <!-- BREADCRUMB -->
+    <nav
+      aria-label="Breadcrumb"
+      class="hidden lg:block mx-auto w-(--content-width) py-4">
+      <ol class="flex items-center gap-4 text-base">
+        <li>
+          <a href="../index.html" class="text-red-700 hover:underline">Home</a>
+        </li>
+        <li aria-hidden="true" class="text-black">/</li>
+        <li>
+          <a href="../get-involved.html" class="text-red-700 hover:underline">Get Involved</a>
+        </li>
+        <li aria-hidden="true" class="text-black">/</li>
+        <li>
+          <span aria-current="page" class="text-black">Volunteer Registration</span>
+        </li>
+      </ol>
+    </nav>
     <!-- MAIN -->
-    <main></main>
+    <main id="main"></main>
 
     <!-- FOOTER -->
-        <!-- FOOTER -->
-    <footer class="mt-24">
+    <footer class="mt-20">
       <!-- Curved divider: biscuit underlay + red overlay -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -230,15 +289,29 @@
           fill="url(#footer-red)" />
       </svg>
 
-      <!-- Full-width red footer body -->
+      <!-- Red band: territorial ack + logo + attribution + copyright -->
       <div class="w-full bg-linear-to-r from-red-500 to-red-700">
-        <div class="mx-auto w-(--content-width) py-16 lg:flex lg:justify-between">
-          <p class="text-sm tracking-wide text-biscuit-500">We are grateful for the privilege to live, work, and play on the
-            unceded traditional territory of the K'ómoks First Nation and
-            acknowledge the rich culture of the Pentlatch, Sathloot
-            ('sath-loot), Sasitla (sa-'seet-la), Ieeksen (eye-'ick-sun) and
-            Xa'xe ('ha-hey) peoples.</p>
-          <img src="../images/logo-biscuit.png" alt="" class="w-70 self-start object-contain pt-6 lg:pt-0">
+        <div class="mx-auto w-(--content-width) py-12 lg:py-16">
+          <div class="lg:flex lg:justify-between lg:gap-12">
+            <p class="text-sm tracking-wide text-biscuit-500">
+              We are grateful for the privilege to live, work, and play on the
+              unceded traditional territory of the K’ómoks First Nation and
+              acknowledge the rich culture of the Pentlatch, Sathloot
+              (‘sath-loot), Sasitla (sa-‘seet-la), Ieeksen (eye-‘ick-sun) and
+              Xa’xe (‘ha-hey) peoples.
+            </p>
+            <img
+              src="../images/logo-biscuit.png"
+              alt=""
+              class="w-70 self-start object-contain pt-6 lg:pt-0" />
+          </div>
+          <div
+            class="mt-8 text-xs text-biscuit-500 lg:flex lg:justify-between">
+            <p>An accredited program of Special Olympics BC</p>
+            <p class="mt-2 lg:mt-0">
+              © 2026 Special Olympics BC, Comox Valley
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,11 @@
+<svg width="1920" height="530" viewBox="12.102 146.951 1899.254 631.165" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <defs>
+        <linearGradient id="swooshGradient" x1="0" y1="0" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fdfcf7"/>
+            <stop offset="1" stop-color="#edece4"/>
+        </linearGradient>
+    </defs>
+    <path d="M 0 248.646 C 81.042 217.934 2959.895 -243.356 1920 984.561 C 1804.283 1121.201 1504.51 985.46 1296.77 984.561 C 864.506 982.688 351.375 1175.649 0 976.245 C -248.928 834.979 -276.242 353.33 0 248.646 Z" fill="white"/>
+    <path d="M0 87.79H1920V533.004L898.259 734.45C683.137 776.864 462.504 783.614 245.192 754.431L0 721.504V87.79Z" fill="url(#swooshGradient)"/>
+    <path d="M -8.214 -133.224 L 1920.467 -130.801 L 1940.725 132.225 L 1595.81 417.792 L 1225.433 582.988 C 909.823 723.758 560.701 791.989 221.942 722.688 C 69.563 691.516 -9.23 665.275 -9.23 665.275 L -8.214 -133.224 Z" fill="white"/>
+</svg>

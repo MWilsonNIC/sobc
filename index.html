@@ -111,7 +111,7 @@
             <!-- Get Involved dropdown -->
             <li class="group relative">
               <a
-                href="get-involved.html"
+                href="register.html"
                 aria-haspopup="true"
                 class="nav-link flex items-center gap-1">
                 Get Involved
@@ -129,7 +129,7 @@
               </a>
               <ul class="nav-dropdown">
                 <li>
-                  <a href="get-involved.html" class="dropdown-link">Register</a>
+                  <a href="register.html" class="dropdown-link">Register</a>
                 </li>
                 <li>
                   <a href="resources.html" class="dropdown-link">Resources</a>
@@ -146,7 +146,7 @@
 
             <li>
               <a
-                href="get-involved.html"
+                href="register.html"
                 class="btn-primary px-6 py-2 text-base">
                 Register
               </a>
@@ -194,40 +194,22 @@
               <a href="about-us.html" class="mobile-nav-link">Who We Are</a>
             </li>
             <li>
-              <a href="programs.html" class="mobile-nav-link">What We Do</a>
-              <ul class="pb-4 flex flex-col">
-                <li>
-                  <a href="programs.html" class="mobile-nav-sublink">
-                    Sports and Programs
-                  </a>
-                </li>
-                <li>
-                  <a href="calendar.html" class="mobile-nav-sublink">Calendar</a>
-                </li>
-                <li>
-                  <a href="gallery.html" class="mobile-nav-sublink">Gallery</a>
-                </li>
-              </ul>
+              <a href="programs.html" class="mobile-nav-link">Sports and Programs</a>
             </li>
             <li>
-              <a href="get-involved.html" class="mobile-nav-link">
-                Get Involved
-              </a>
-              <ul class="pb-4 flex flex-col">
-                <li>
-                  <a href="get-involved.html" class="mobile-nav-sublink">
-                    Register
-                  </a>
-                </li>
-                <li>
-                  <a href="resources.html" class="mobile-nav-sublink">
-                    Resources
-                  </a>
-                </li>
-                <li>
-                  <a href="donate.html" class="mobile-nav-sublink">Donate</a>
-                </li>
-              </ul>
+              <a href="calendar.html" class="mobile-nav-link">Calendar</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            </li>
+            <li>
+              <a href="register.html" class="mobile-nav-link">Register</a>
+            </li>
+            <li>
+              <a href="resources.html" class="mobile-nav-link">Resources</a>
+            </li>
+            <li>
+              <a href="donate.html" class="mobile-nav-link">Donate</a>
             </li>
             <li>
               <a href="contact.html" class="mobile-nav-link">Contact Us</a>
@@ -235,7 +217,7 @@
           </ul>
 
           <div class="py-8">
-            <a href="get-involved.html" class="btn-outline">Register</a>
+            <a href="register.html" class="btn-outline">Register</a>
           </div>
         </div>
       </nav>
@@ -265,23 +247,61 @@
               supportive community. Whether you are looking to join as an
               athlete, volunteer, coach, or supporter, we are glad you are here.
             </p>
-            <a href="get-involved.html" class="link">Register</a>
-            <a href="programs.html" class="link">View Sports</a>
+            <a href="register.html" class="link">Register</a>
+            <a href="programs.html" class="link">View Sports and Programs</a>
             <a href="calendar.html" class="link">View Calendar</a>
           </div>
           <img src="images/landscape-sm.png" alt="" class="mt-6 lg:mt-0 aspect-[3/2]" />
         </section>
       </div>
 
-      <!-- What we do -->
+      <!-- FEATURED EVENT
+           Toggle this whole <section> on/off by adding the `hidden`
+           attribute to it (or removing the section entirely in WP).
+           Note: when this banner is present the "What we do" section
+           below is image-right; when it's removed, swap "What we do"
+           back to image-left so the visual rhythm keeps alternating. -->
+      <section class="bg-linear-to-r from-red-700 to-red-900 text-white">
+        <div
+          class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center py-12 lg:py-20">
+          <img
+            src="images/landscape-sm.png"
+            alt=""
+            class="hidden lg:block aspect-[3/2]" />
+          <div>
+            <p
+              class="text-sm font-bold uppercase tracking-wider text-biscuit-500">
+              Upcoming event
+            </p>
+            <h2 class="mt-2 text-white">
+              Concert for SOBC Comox Valley
+            </h2>
+            <p class="text-biscuit-500">
+              Join us at the Sid Williams Theatre on November 15 for a
+              fundraising concert featuring [Artist Name]. All proceeds
+              support local athletes in the Comox Valley.
+            </p>
+            <a
+              href="#"
+              class="mt-6 inline-block border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors hover:bg-white hover:text-red-700 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2">
+              Buy tickets
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- What we do
+           Image side is image-RIGHT here because the Featured Event
+           banner above is image-left. If the Featured Event is removed,
+           swap this back to image-left (move the <img> before the <div>
+           and change its class to `hidden lg:block aspect-[3/2]`). -->
       <div
         class="py-12 lg:py-20"
         style="background: linear-gradient(to bottom, white, #f7f6f3)">
         <section
           class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24">
-          <img src="images/landscape-sm.png" alt="" class="hidden lg:block aspect-[3/2]" />
           <div>
-            <h2>What we do</h2>
+            <h2>What We Do</h2>
             <p>
               At Special Olympics BC, sport is the starting point for
               confidence, friendship, health, and personal growth. Our local
@@ -300,45 +320,55 @@
               current offerings, practice information, and local contact
               details.
             </p>
-            <a href="programs.html" class="link">View Sports</a>
+            <a href="programs.html" class="link">View Sports and Programs</a>
           </div>
+          <img
+            src="images/landscape-sm.png"
+            alt=""
+            class="mt-6 lg:mt-0 aspect-[3/2]" />
         </section>
       </div>
 
       <!-- Get involved  -->
       <section class="py-12 lg:py-20 bg-biscuit-50">
         <div class="w-(--content-width) mx-auto">
-          <h2>Get involved</h2>
+          <h2>Get Involved</h2>
           <div class="lg:grid lg:grid-cols-3 lg:gap-12">
             <!-- Become an athlete -->
-            <a href="get-involved.html" class="card">
+            <a href="register.html" class="card">
               <img
                 src="images/landscape-sm.png"
                 alt=""
                 class="aspect-[3/2] rounded-none" />
               <div class="p-6 flex flex-col flex-1">
-                <h3>Become an athlete</h3>
+                <h3>Athlete Registration</h3>
                 <p>
                   Join a supportive community where athletes can train, compete,
                   and have fun year-round.
                 </p>
-                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+                <span class="mt-auto pt-6 flex items-center gap-2 font-bold text-red-700">
+                  Become an Athlete
+                  <span class="card-arrow" aria-hidden="true"></span>
+                </span>
               </div>
             </a>
 
             <!-- Become a Volunteer -->
-            <a href="get-involved.html" class="mt-6 lg:mt-0 card">
+            <a href="register.html" class="mt-6 lg:mt-0 card">
               <img
                 src="images/landscape-sm.png"
                 alt=""
                 class="aspect-[3/2] rounded-none" />
               <div class="p-6 flex flex-col flex-1">
-                <h3>Become a volunteer</h3>
+                <h3>Volunteer Registration</h3>
                 <p>
                   Help make local programs possible as a coach, helper,
                   organizer, or community supporter.
                 </p>
-                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+                <span class="mt-auto pt-6 flex items-center gap-2 font-bold text-red-700">
+                  Become a Volunteer
+                  <span class="card-arrow" aria-hidden="true"></span>
+                </span>
               </div>
             </a>
 
@@ -349,12 +379,15 @@
                 alt=""
                 class="aspect-[3/2] rounded-none" />
               <div class="p-6 flex flex-col flex-1">
-                <h3>Support the chapter</h3>
+                <h3>Support the Chapter</h3>
                 <p>
                   Your donation helps local athletes access quality programs,
                   equipment, and training opportunities.
                 </p>
-                <span class="card-arrow mt-auto" aria-hidden="true"></span>
+                <span class="mt-auto pt-6 flex items-center gap-2 font-bold text-red-700">
+                  Donate
+                  <span class="card-arrow" aria-hidden="true"></span>
+                </span>
               </div>
             </a>
           </div>
@@ -365,7 +398,7 @@
         class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24 py-12 lg:py-20">
         <!-- Calendar  -->
         <section class="box box-small">
-          <h2>Stay up to date</h2>
+          <h2>Stay Up to Date</h2>
           <p>
             Stay up to date with practices, competitions, deadlines, and local
             events through our calendar.
@@ -396,8 +429,8 @@
         class="block h-32 w-full">
         <defs>
           <linearGradient id="footer-red" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stop-color="var(--color-red-500)" />
-            <stop offset="100%" stop-color="var(--color-red-700)" />
+            <stop offset="0%" stop-color="var(--color-red-700)" />
+            <stop offset="100%" stop-color="var(--color-red-900)" />
           </linearGradient>
           <linearGradient id="footer-biscuit" x1="0" x2="1" y1="0" y2="0">
             <stop offset="0%" stop-color="var(--color-biscuit-500)" />
@@ -413,7 +446,7 @@
       </svg>
 
       <!-- Red band: territorial ack + logo + attribution + copyright -->
-      <div class="w-full bg-linear-to-r from-red-500 to-red-700">
+      <div class="w-full bg-linear-to-r from-red-700 to-red-900">
         <div class="mx-auto w-(--content-width) py-12 lg:py-16">
           <div class="lg:flex lg:justify-between lg:gap-12">
             <p class="text-sm tracking-wide text-biscuit-500">

@@ -9,6 +9,7 @@
 
   --color-red-500: #ff0000; /* SO Red — footer gradient only */
   --color-red-700: #c4161c; /* Mid Red — primary brand red */
+  --color-red-900: #820000;
 
   --color-grey-700: #636359; /* SO Grey */
 
@@ -171,13 +172,25 @@
     @apply transition-colors hover:border-red-700 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
   }
 
+  /* Article cards with an inner link get the same border hover —
+     :has lets us bubble the inner anchor's :hover up to the card. */
+  article.card {
+    @apply transition-colors;
+  }
+
+  article.card:has(a:hover),
+  article.card:has(a:focus-visible) {
+    @apply border-red-700;
+  }
+
   /* Decorative arrow shown at the bottom of an a.card so a card-shaped
      link gets the same visual cue as a .link CTA. Slides on card hover. */
   .card-arrow {
     @apply inline-block size-6 bg-red-700 mask-no-repeat mask-center mask-contain transition-transform duration-200 [mask-image:var(--arrow-icon)] [-webkit-mask-image:var(--arrow-icon)];
   }
 
-  a.card:hover .card-arrow {
+  a.card:hover .card-arrow,
+  a:hover .card-arrow {
     @apply translate-x-1;
   }
 
@@ -247,7 +260,7 @@
   }
 
   .nav-dropdown {
-    @apply invisible absolute left-0 top-full z-10 mt-1 min-w-52 rounded-xl border border-biscuit-500 bg-white py-2 opacity-0 transition-all duration-150;
+    @apply invisible absolute left-0 top-full z-10 mt-1 min-w-52 rounded-xl bg-white pb-2 opacity-0 transition-all duration-150;
   }
 
   .group:hover > .nav-dropdown,
@@ -262,7 +275,7 @@
   }
 
   .dropdown-link {
-    @apply block px-4 py-2 text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
+    @apply block px-3 py-2 text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
   }
 
   /* ============================================================

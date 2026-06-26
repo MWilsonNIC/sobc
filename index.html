@@ -404,8 +404,11 @@
                 Other
               </button>
               <!-- Donate Now sits at the end of the amounts row: a full-width
-                   bar on mobile, then a normal auto-width button from sm up
-                   (like the "Buy tickets" button above). -->
+                   bar on mobile, a normal auto-width button inline from sm up
+                   (like the "Buy tickets" button above), then forced onto its
+                   own line from lg up by the flex line-break below so it never
+                   rejoins the amounts row on wide/two-column screens. -->
+              <span aria-hidden="true" class="hidden basis-full lg:block"></span>
               <a
                 href="https://sobccommunity.crowdchange.ca/2790/donate"
                 target="_blank"

@@ -379,6 +379,9 @@
   .basis-\[calc\(100\%\/3\)\] {
     flex-basis: calc(100% / 3);
   }
+  .basis-full {
+    flex-basis: 100%;
+  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);

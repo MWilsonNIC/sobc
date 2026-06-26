@@ -357,7 +357,7 @@
                  highlights it — selection state is handled in src/menu.js.
                  Only "Donate Now" opens the CrowdChange page. -->
             <div
-              class="mt-6 flex flex-wrap gap-3"
+              class="mt-6 flex flex-wrap items-center gap-2"
               role="group"
               aria-label="Choose a donation amount"
               id="donate-amounts">
@@ -365,53 +365,56 @@
                 type="button"
                 data-amount="20"
                 aria-pressed="false"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 $20
               </button>
               <button
                 type="button"
                 data-amount="50"
                 aria-pressed="false"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 $50
               </button>
               <button
                 type="button"
                 data-amount="100"
                 aria-pressed="true"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 $100
               </button>
               <button
                 type="button"
                 data-amount="250"
                 aria-pressed="false"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 $250
               </button>
               <button
                 type="button"
                 data-amount="500"
                 aria-pressed="false"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 $500
               </button>
               <button
                 type="button"
                 data-amount=""
                 aria-pressed="false"
-                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-3 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
                 Other
               </button>
+              <!-- Donate Now sits at the end of the amounts row: a full-width
+                   bar on mobile, then a normal auto-width button from sm up
+                   (like the "Buy tickets" button above). -->
+              <a
+                href="https://sobccommunity.crowdchange.ca/2790/donate"
+                target="_blank"
+                rel="noopener"
+                id="donate-now"
+                class="btn-primary mt-2 w-full sm:mt-0 sm:w-auto lg:mt-2">
+                Donate Now
+              </a>
             </div>
-            <a
-              href="https://sobccommunity.crowdchange.ca/2790/donate"
-              target="_blank"
-              rel="noopener"
-              id="donate-now"
-              class="btn-primary mt-8">
-              Donate Now
-            </a>
           </div>
         </div>
       </section>

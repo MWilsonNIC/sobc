@@ -329,6 +329,93 @@
         </section>
       </div>
 
+      <!-- Make a Difference (donation)
+           Puts fundraising front and centre. Clicking any amount (or
+           "Donate Now") opens the chapter CrowdChange page in a new tab.
+
+           IMAGE SIDE — keep the visual rhythm by alternating with the
+           "What We Do" section directly above:
+             • Featured Event SHOWN  → What We Do is image-RIGHT → this is image-LEFT  (current default)
+             • Featured Event HIDDEN → What We Do is image-LEFT  → make this image-RIGHT:
+                 move the grey placeholder <div> to AFTER the text <div> and
+                 change its class to `mt-6 lg:mt-0 aspect-[3/2] bg-gray-300`. -->
+      <section class="bg-white py-12 lg:py-20">
+        <div
+          class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center">
+          <!-- Grey placeholder (image-LEFT) -->
+          <div
+            class="hidden lg:block aspect-[3/2] bg-gray-300"
+            aria-hidden="true"></div>
+          <div>
+            <h2>Make a Difference</h2>
+            <p>
+              Please donate and help us get one more athlete onto the playing
+              field.
+            </p>
+            <!-- Amounts mirror the chapter CrowdChange preset tiers
+                 ($20 / $50 / $100 / $250 / $500). Clicking one only
+                 highlights it — selection state is handled in src/menu.js.
+                 Only "Donate Now" opens the CrowdChange page. -->
+            <div
+              class="mt-6 flex flex-wrap gap-3"
+              role="group"
+              aria-label="Choose a donation amount"
+              id="donate-amounts">
+              <button
+                type="button"
+                data-amount="20"
+                aria-pressed="false"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                $20
+              </button>
+              <button
+                type="button"
+                data-amount="50"
+                aria-pressed="false"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                $50
+              </button>
+              <button
+                type="button"
+                data-amount="100"
+                aria-pressed="true"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                $100
+              </button>
+              <button
+                type="button"
+                data-amount="250"
+                aria-pressed="false"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                $250
+              </button>
+              <button
+                type="button"
+                data-amount="500"
+                aria-pressed="false"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                $500
+              </button>
+              <button
+                type="button"
+                data-amount=""
+                aria-pressed="false"
+                class="cursor-pointer rounded-lg border-2 border-red-700 px-5 py-2 font-bold text-red-700 transition-colors hover:bg-red-700 hover:text-white aria-pressed:bg-red-700 aria-pressed:text-white">
+                Other
+              </button>
+            </div>
+            <a
+              href="https://sobccommunity.crowdchange.ca/2790/donate"
+              target="_blank"
+              rel="noopener"
+              id="donate-now"
+              class="btn-primary mt-8">
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- Get involved  -->
       <section class="py-12 lg:py-20 bg-biscuit-50">
         <div class="w-(--content-width) mx-auto">

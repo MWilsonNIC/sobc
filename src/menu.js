@@ -15,6 +15,20 @@ if (loadMoreBtn) {
 }
 
 
+// --- Homepage "Make a Difference": highlight the chosen donation amount.
+// Clicking an amount only toggles its selected state (aria-pressed); it does
+// NOT navigate. Only the "Donate Now" button opens the CrowdChange page.
+const donateAmounts = document.getElementById("donate-amounts");
+if (donateAmounts) {
+  const pills = donateAmounts.querySelectorAll("button[data-amount]");
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      pills.forEach((p) => p.setAttribute("aria-pressed", "false"));
+      pill.setAttribute("aria-pressed", "true");
+    });
+  });
+}
+
 // --- Header: add .is-scrolled past a small scroll threshold so the
 // header can shrink and gain a divider once the user moves down the page.
 // Uses two thresholds (hysteresis) so the class doesn't ping-pong when the

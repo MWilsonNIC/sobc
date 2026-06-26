@@ -29,6 +29,34 @@ if (donateAmounts) {
   });
 }
 
+// --- Homepage "Our Sponsors" carousel: prev/next scroll the logo track
+// by roughly one visible page. Buttons are disabled at the track ends and
+// hidden via CSS at xl (where all seven logos fit at once).
+const sponsorTrack = document.getElementById("sponsor-track");
+if (sponsorTrack) {
+  const prevBtn = document.getElementById("sponsor-prev");
+  const nextBtn = document.getElementById("sponsor-next");
+
+  const updateButtons = () => {
+    const maxScroll = sponsorTrack.scrollWidth - sponsorTrack.clientWidth;
+    if (prevBtn) prevBtn.disabled = sponsorTrack.scrollLeft <= 1;
+    if (nextBtn) nextBtn.disabled = sponsorTrack.scrollLeft >= maxScroll - 1;
+  };
+
+  const scrollByPage = (direction) => {
+    sponsorTrack.scrollBy({
+      left: direction * sponsorTrack.clientWidth,
+      behavior: "smooth",
+    });
+  };
+
+  prevBtn?.addEventListener("click", () => scrollByPage(-1));
+  nextBtn?.addEventListener("click", () => scrollByPage(1));
+  sponsorTrack.addEventListener("scroll", updateButtons, { passive: true });
+  window.addEventListener("resize", updateButtons);
+  updateButtons();
+}
+
 // --- Header: add .is-scrolled past a small scroll threshold so the
 // header can shrink and gain a divider once the user moves down the page.
 // Uses two thresholds (hysteresis) so the class doesn't ping-pong when the

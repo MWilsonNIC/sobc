@@ -275,7 +275,12 @@
   }
 
   .dropdown-link {
-    @apply block px-3 py-2 text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
+    @apply block px-3 py-2 font-medium text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
+  }
+
+  /* Mega-menu sport link — icon + name, used in the What We Do panel */
+  .mega-sport {
+    @apply flex items-center gap-3 rounded-lg px-3 py-2 font-normal text-black transition-colors hover:bg-biscuit-50 hover:text-red-700 focus-visible:bg-biscuit-50 focus-visible:text-red-700 aria-[current]:text-red-700 aria-[current]:bg-biscuit-50;
   }
 
   /* ============================================================
@@ -287,6 +292,29 @@
   }
 
   .mobile-nav-sublink {
-    @apply block py-3 pl-4 text-base text-grey-700 transition-colors hover:text-red-700 focus-visible:text-red-700 aria-[current]:text-red-700;
+    @apply block py-3 pl-4 text-base font-medium text-black transition-colors hover:text-red-700 focus-visible:text-red-700 aria-[current]:text-red-700;
+  }
+
+  /* Mobile accordion (native details/summary — no JS required) */
+  .mobile-acc > summary {
+    @apply flex items-center justify-between cursor-pointer list-none py-3 text-xl font-bold text-black transition-colors hover:text-red-700 focus-visible:text-red-700;
+  }
+
+  .mobile-acc > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-acc > summary .acc-chevron {
+    @apply h-5 w-5 transition-transform duration-200;
+  }
+
+  .mobile-acc[open] > summary .acc-chevron {
+    @apply rotate-180;
+  }
+
+  /* Active-page heading — turn the section summary red when it contains the
+     current page (mirrors the desktop nav trigger). */
+  .mobile-acc:has([aria-current]) > summary {
+    @apply text-red-700;
   }
 }

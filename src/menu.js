@@ -15,20 +15,6 @@ if (loadMoreBtn) {
 }
 
 
-// --- Homepage "Make a Difference": highlight the chosen donation amount.
-// Clicking an amount only toggles its selected state (aria-pressed); it does
-// NOT navigate. Only the "Donate Now" button opens the CrowdChange page.
-const donateAmounts = document.getElementById("donate-amounts");
-if (donateAmounts) {
-  const pills = donateAmounts.querySelectorAll("button[data-amount]");
-  pills.forEach((pill) => {
-    pill.addEventListener("click", () => {
-      pills.forEach((p) => p.setAttribute("aria-pressed", "false"));
-      pill.setAttribute("aria-pressed", "true");
-    });
-  });
-}
-
 // --- Homepage "Our Sponsors" carousel: prev/next scroll the logo track
 // by roughly one visible page. Buttons are disabled at the track ends and
 // hidden via CSS at xl (where all seven logos fit at once).

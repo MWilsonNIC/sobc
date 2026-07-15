@@ -94,7 +94,7 @@
               </a>
               <div class="nav-dropdown w-[40rem] pt-2 pb-6 pr-6">
                 <div class="grid grid-cols-[max-content_1fr] gap-6">
-                  <ul class="border-r border-biscuit-500 pr-4">
+                  <ul class="border-r border-biscuit-500">
                     <li>
                   <a href="../programs.html" class="dropdown-link">
                     Sports and Programs
@@ -132,6 +132,10 @@
                   <a href="floorball.html" class="mega-sport">
                     <img src="../images/sports/people.svg" alt="" class="size-8 shrink-0" />
                     <span>Floorball</span>
+                  </a>
+                  <a href="golf.html" class="mega-sport">
+                    <img src="../images/sports/soc-icons_golf.svg" alt="" class="size-8 shrink-0" />
+                    <span>Golf</span>
                   </a>
                   <a href="skiing.html" class="mega-sport">
                     <img src="../images/sports/soc-icons_cross-country-skiing.svg" alt="" class="size-8 shrink-0" />
@@ -252,6 +256,7 @@
               <a href="bowling.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">5-Pin Bowling</a>
               <a href="curling.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Curling</a>
               <a href="floorball.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Floorball</a>
+              <a href="golf.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Golf</a>
               <a href="skiing.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Nordic Skiing</a>
               <a href="powerlifting.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700" aria-current="page">Powerlifting</a>
               <a href="fundamentals.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">FUNdamentals</a>
@@ -337,15 +342,53 @@
             before competing in powerlifting.
           </p>
 
-          <div class="mt-8 inline-flex items-center gap-4 rounded-xl border border-biscuit-500 px-6 py-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8 text-red-700 shrink-0">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-            </svg>
-            <div>
-              <div class="text-sm uppercase tracking-wide text-grey-700">Season</div>
-              <div class="text-lg font-bold">Summer</div>
-            </div>
+          <!-- Season tracker: all four seasons shown; active seasons are
+               red/bold, off-seasons are greyed. Toggle a season by swapping
+               its <li> wrapper colour (active: text-red-700 + label
+               text-black font-bold; inactive: text-gray-300). -->
+          <div class="mt-8 inline-block rounded-xl border border-biscuit-500 px-6 py-4">
+            <div class="text-sm uppercase tracking-wide text-grey-700">Seasons</div>
+            <ul class="mt-3 flex flex-wrap gap-x-6 gap-y-3">
+              <li class="flex flex-col items-center gap-1 text-red-700">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8">
+                  <path d="M12 21v-9" />
+                  <path d="M12 12C12 8 9 5 5 5c0 4 3 7 7 7Z" />
+                  <path d="M12 14c0-3 2.5-5.5 6-5.5C18 12 15.5 14 12 14Z" />
+                </svg>
+                <span class="text-sm font-bold text-black">Spring</span>
+              </li>
+              <li class="flex flex-col items-center gap-1 text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                </svg>
+                <span class="text-sm font-medium">Summer</span>
+              </li>
+              <li class="flex flex-col items-center gap-1 text-red-700">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8">
+                  <path d="M5 19c8 1 14-5 14-14C11 4 4 11 5 19Z" />
+                  <path d="M5 19 14 10" />
+                </svg>
+                <span class="text-sm font-bold text-black">Fall</span>
+              </li>
+              <li class="flex flex-col items-center gap-1 text-red-700">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8">
+                  <path d="M10 4l2 1l2 -1" />
+                  <path d="M12 2v6.5l3 1.72" />
+                  <path d="M17.928 6.268l.134 2.232l1.866 1.232" />
+                  <path d="M20.66 7l-5.629 3.25l.01 3.458" />
+                  <path d="M19.928 14.268l-1.866 1.232l-.134 2.232" />
+                  <path d="M20.66 17l-5.629 -3.25l-2.99 1.738" />
+                  <path d="M14 20l-2 -1l-2 1" />
+                  <path d="M12 22v-6.5l-3 -1.72" />
+                  <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232" />
+                  <path d="M3.34 17l5.629 -3.25l-.01 -3.458" />
+                  <path d="M4.072 9.732l1.866 -1.232l.134 -2.232" />
+                  <path d="M3.34 7l5.629 3.25l2.99 -1.738" />
+                </svg>
+                <span class="text-sm font-bold text-black">Winter</span>
+              </li>
+            </ul>
           </div>
         </div>
         <img
@@ -367,24 +410,23 @@
 
             <div class="mt-6">
               <h3>Practice time</h3>
-              <p>[Day and time]</p>
+              <p>To be determined</p>
             </div>
 
             <div class="mt-6">
               <h3>Location</h3>
-              <p>[Facility name and address]</p>
+              <p>CRA Lewis Centre (489 Old Island Hwy., Courtenay)</p>
             </div>
 
             <div class="mt-6">
               <h3>What to bring</h3>
-              <p>[Equipment, clothing, fees, or other notes]</p>
+              <p>Athletic footwear, shorts or sweatpants, t-shirt, water bottle</p>
             </div>
 
             <div class="mt-6">
               <h3>Contact</h3>
               <p>
-                For more information about Powerlifting, contact [Name] at
-                [Email / Phone].
+                For more information about Powerlifting, contact us; a head coach will be announced soon.
               </p>
             </div>
           </div>

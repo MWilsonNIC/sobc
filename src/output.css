@@ -242,6 +242,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -250,6 +253,9 @@
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -439,6 +445,9 @@
   }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
   }
   .divide-y {
     :where(& > :not(:last-child)) {
@@ -634,6 +643,9 @@
   .text-black {
     color: var(--color-black);
   }
+  .text-gray-300 {
+    color: var(--color-gray-300);
+  }
   .text-grey-700 {
     color: var(--color-grey-700);
   }
@@ -823,6 +835,11 @@
       flex-basis: 25%;
     }
   }
+  .sm\:basis-\[33\.3333\%\] {
+    @media (width >= 40rem) {
+      flex-basis: 33.3333%;
+    }
+  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -841,6 +858,11 @@
   .md\:basis-\[20\%\] {
     @media (width >= 48rem) {
       flex-basis: 20%;
+    }
+  }
+  .md\:basis-\[25\%\] {
+    @media (width >= 48rem) {
+      flex-basis: 25%;
     }
   }
   .md\:grid-cols-3 {
@@ -897,6 +919,11 @@
   .lg\:basis-\[16\.6667\%\] {
     @media (width >= 64rem) {
       flex-basis: 16.6667%;
+    }
+  }
+  .lg\:basis-\[20\%\] {
+    @media (width >= 64rem) {
+      flex-basis: 20%;
     }
   }
   .lg\:grid-cols-2 {

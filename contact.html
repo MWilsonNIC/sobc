@@ -94,7 +94,7 @@
               </a>
               <div class="nav-dropdown w-[40rem] pt-2 pb-6 pr-6">
                 <div class="grid grid-cols-[max-content_1fr] gap-6">
-                  <ul class="border-r border-biscuit-500 pr-4">
+                  <ul class="border-r border-biscuit-500">
                     <li>
                   <a href="programs.html" class="dropdown-link">
                     Sports and Programs
@@ -132,6 +132,10 @@
                   <a href="programs/floorball.html" class="mega-sport">
                     <img src="images/sports/people.svg" alt="" class="size-8 shrink-0" />
                     <span>Floorball</span>
+                  </a>
+                  <a href="programs/golf.html" class="mega-sport">
+                    <img src="images/sports/soc-icons_golf.svg" alt="" class="size-8 shrink-0" />
+                    <span>Golf</span>
                   </a>
                   <a href="programs/skiing.html" class="mega-sport">
                     <img src="images/sports/soc-icons_cross-country-skiing.svg" alt="" class="size-8 shrink-0" />
@@ -252,6 +256,7 @@
               <a href="programs/bowling.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">5-Pin Bowling</a>
               <a href="programs/curling.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Curling</a>
               <a href="programs/floorball.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Floorball</a>
+              <a href="programs/golf.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Golf</a>
               <a href="programs/skiing.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Nordic Skiing</a>
               <a href="programs/powerlifting.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">Powerlifting</a>
               <a href="programs/fundamentals.html" class="mobile-nav-sublink pl-8 font-normal text-grey-700 aria-[current]:text-red-700">FUNdamentals</a>
@@ -361,64 +366,74 @@
             <span>Flickr</span>
           </a>
         </div>
-        <div class="mt-6 lg:mt-0">
-          <h2>Local Executive</h2>
-          <dl
-            class="grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-8 gap-y-2 text-base">
-            <dt class="font-medium">Local Coordinator</dt>
-            <dd>Randy James</dd>
-
-            <dt class="font-medium">Treasurer</dt>
-            <dd>Christine Helpard</dd>
-
-            <dt class="font-medium">Secretary</dt>
-            <dd>Kim Pierce</dd>
-
-            <dt class="font-medium">Registration Coordinator</dt>
-            <dd>Phyllis Baudais</dd>
-
-            <dt class="font-medium">Volunteer Coordinator</dt>
-            <dd class="italic text-grey-700">vacant</dd>
-
-            <dt class="font-medium">Co-Fundraising Coordinator</dt>
-            <dd>Louise Martin</dd>
-
-            <dt class="font-medium">Co-Fundraising Coordinator</dt>
-            <dd>Caitlin Hooper</dd>
-
-            <dt class="font-medium">Program Coordinator</dt>
-            <dd class="italic text-grey-700">vacant</dd>
-
-            <dt class="font-medium">Member-at-Large</dt>
-            <dd>Alisa Hooper</dd>
-
-            <dt class="font-medium">Member-at-Large</dt>
-            <dd>Jana Letain</dd>
-
-            <dt class="font-medium">Member-at-Large</dt>
-            <dd>Teraza Tardif</dd>
-
-            <dt class="font-medium">Member-at-Large</dt>
-            <dd class="italic text-grey-700">vacant</dd>
-          </dl>
-        </div>
+        <img
+          src="images/landscape-sm.png"
+          alt=""
+          class="mt-6 lg:mt-0 aspect-[3/2]" />
       </section>
 
-      <!-- Contact form (WordPress plugin slot) -->
+      <!-- Local Executive + Contact form -->
       <div class="bg-biscuit-50 py-12 lg:py-20">
-        <section class="w-(--content-width) mx-auto">
-          <h2>Send a Message</h2>
-          <img
-            id="contact-form"
-            src="images/landscape-sm.png"
-            alt=""
-            class="aspect-[3/2]" />
+        <section
+          class="w-(--content-width) mx-auto lg:grid lg:grid-cols-2 lg:gap-24">
+          <!-- Local Executive -->
+          <div>
+            <h2>Local Executive</h2>
+            <dl
+              class="mt-4 grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-8 gap-y-2 text-base">
+              <dt class="font-medium">Local Coordinator</dt>
+              <dd>Randy James</dd>
+
+              <dt class="font-medium">Treasurer</dt>
+              <dd>Christine Helpard</dd>
+
+              <dt class="font-medium">Secretary</dt>
+              <dd>Kim Pierce</dd>
+
+              <dt class="font-medium">Registration Coordinator</dt>
+              <dd>Phyllis Baudais</dd>
+
+              <dt class="font-medium">Volunteer Coordinator</dt>
+              <dd class="italic text-grey-700">vacant</dd>
+
+              <dt class="font-medium">Co-Fundraising Coordinator</dt>
+              <dd>Louise Martin</dd>
+
+              <dt class="font-medium">Co-Fundraising Coordinator</dt>
+              <dd>Caitlin Hooper</dd>
+
+              <dt class="font-medium">Program Coordinator</dt>
+              <dd class="italic text-grey-700">vacant</dd>
+
+              <dt class="font-medium">Member-at-Large</dt>
+              <dd>Alisa Hooper</dd>
+
+              <dt class="font-medium">Member-at-Large</dt>
+              <dd>Jana Letain</dd>
+
+              <dt class="font-medium">Member-at-Large</dt>
+              <dd>Teraza Tardif</dd>
+
+              <dt class="font-medium">Member-at-Large</dt>
+              <dd class="italic text-grey-700">vacant</dd>
+            </dl>
+          </div>
+
+          <!-- Contact form (WordPress plugin slot) -->
+          <div class="mt-10 lg:mt-0">
+            <h2>Send a Message</h2>
+            <img
+              id="contact-form"
+              src="images/landscape-sm.png"
+              alt=""
+              class="mt-4 aspect-[3/2]" />
+          </div>
         </section>
       </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-20">
+    <footer class="bg-biscuit-50">
       <!-- Curved divider: biscuit underlay + red overlay -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
